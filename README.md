@@ -1,7 +1,8 @@
 # AutoVP: An Automated Visual Prompting Framework and Benchmark
+## Overview
+This is the official repo for "[AutoVP: An Automated Visual Prompting Framework and Benchmark](https://arxiv.org/abs/2310.08381)" by Hsi-Ai Tsao*, [Lei Hsiung](https://hsiung.cc/)*, [Pin-Yu Chen](http://pinyuchen.com/), [Sijia Liu](https://lsjxjtu.github.io/), and [Tsung-Yi Ho](https://tsungyiho.github.io/).
 
-Visual prompting (VP) is an emerging parameter-efficient finetuning approach to adapting pre-trained vision models to solve various downstream image classification tasks. However, there lacks a systematic study on the design space of VP and a unified benchmark for performance evaluation.
-To bridge this gap, we propose AutoVP, an end-to-end expandable framework for automating the design choices of VP, along with 12 downstream image  classification tasks as a holistic performance benchmark. Our design space covers the joint optimization of the prompts, the selection of pre-trained models (including image classifiers and text-image encoders), and model output mapping strategies (including nonparametric and trainable label mapping). The extensive experimental results show that AutoVP outperforms the current best-known VP methods by a substantial margin (up to a 6.7% accuracy increase) and achieves a maximum of 27.5% improvement compared to linear probing (LP) baseline. AutoVP has a two-fold contribution in serving as an efficient tool to facilitate the hyperparameter tuning and design choices of VP and in providing a comprehensive benchmark to accelerate the development of VP.
+Visual prompting (VP) is an emerging parameter-efficient fine-tuning approach to adapting pre-trained vision models to solve various downstream image-classification tasks. However, there has hitherto been little systematic study of the design space of VP and no clear benchmark for evaluating its performance. To bridge this gap, we propose AutoVP, an end-to-end expandable framework for automating VP design choices, along with 12 downstream image-classification tasks that can serve as a holistic VP-performance benchmark. Our design space covers 1) the joint optimization of the prompts; 2) the selection of pre-trained models, including image classifiers and text-image encoders; and 3) model output mapping strategies, including nonparametric and trainable label mapping. Our extensive experimental results show that AutoVP outperforms the best-known current VP methods by a substantial margin, having up to 6.7% improvement in accuracy; and attains a maximum performance increase of 27.5% compared to linear-probing (LP) baseline. AutoVP thus makes a two-fold contribution: serving both as an efficient tool for hyperparameter tuning on VP design choices, and as a comprehensive benchmark that can reasonably be expected to accelerate VP's development.
 
 ![System Plot](image/System_Plot.jpg)
 ![Performance](image/autovp_accuracy_gain_resnet.jpg)
@@ -105,3 +106,16 @@ ISIC (Melanoma) Dataset is from [ISIC](https://dataverse.harvard.edu/dataset.xht
 
 * Parameters in `frequency_analysis.py`
     * `dataset`: Name of the dataset. It will evaluate on the checkpoint file `{dataset}_last.pth`
+
+
+## Citations
+If you find this helpful for your research, please cite our papers as follows:
+
+    @article{tsao2023autovp,
+      title={{AutoVP: An Automated Visual Prompting Framework and Benchmark}}, 
+      author = {Hsi-Ai Tsao and Lei Hsiung and Pin-Yu Chen and Sijia Liu and Tsung-Yi Ho},
+      year = {2023},
+      eprint={2310.08381},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+    }
