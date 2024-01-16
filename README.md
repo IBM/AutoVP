@@ -1,6 +1,6 @@
 # AutoVP: An Automated Visual Prompting Framework and Benchmark
 ## Overview
-This is the official repo for "[AutoVP: An Automated Visual Prompting Framework and Benchmark](https://arxiv.org/abs/2310.08381)" by Hsi-Ai Tsao*, [Lei Hsiung](https://hsiung.cc/)*, [Pin-Yu Chen](http://pinyuchen.com/), [Sijia Liu](https://lsjxjtu.github.io/), and [Tsung-Yi Ho](https://tsungyiho.github.io/).
+This repository contains code for the ICLR 2024 Paper "[AutoVP: An Automated Visual Prompting Framework and Benchmark](https://arxiv.org/abs/2310.08381)" by Hsi-Ai Tsao*, [Lei Hsiung](https://hsiung.cc/)*, [Pin-Yu Chen](http://pinyuchen.com/), [Sijia Liu](https://lsjxjtu.github.io/), and [Tsung-Yi Ho](https://tsungyiho.github.io/).
 
 Visual prompting (VP) is an emerging parameter-efficient fine-tuning approach to adapting pre-trained vision models to solve various downstream image-classification tasks. However, there has hitherto been little systematic study of the design space of VP and no clear benchmark for evaluating its performance. To bridge this gap, we propose AutoVP, an end-to-end expandable framework for automating VP design choices, along with 12 downstream image-classification tasks that can serve as a holistic VP-performance benchmark. Our design space covers 1) the joint optimization of the prompts; 2) the selection of pre-trained models, including image classifiers and text-image encoders; and 3) model output mapping strategies, including nonparametric and trainable label mapping. Our extensive experimental results show that AutoVP outperforms the best-known current VP methods by a substantial margin, having up to 6.7% improvement in accuracy; and attains a maximum performance increase of 27.5% compared to linear-probing (LP) baseline. AutoVP thus makes a two-fold contribution: serving both as an efficient tool for hyperparameter tuning on VP design choices, and as a comprehensive benchmark that can reasonably be expected to accelerate VP's development.
 
@@ -111,11 +111,9 @@ ISIC (Melanoma) Dataset is from [ISIC](https://dataverse.harvard.edu/dataset.xht
 ## Citations
 If you find this helpful for your research, please cite our papers as follows:
 
-    @article{tsao2023autovp,
+    @inproceedings{tsao2024autovp,
       title={{AutoVP: An Automated Visual Prompting Framework and Benchmark}}, 
       author = {Hsi-Ai Tsao and Lei Hsiung and Pin-Yu Chen and Sijia Liu and Tsung-Yi Ho},
-      year = {2023},
-      eprint={2310.08381},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV}
+      booktitle={The Twelfth International Conference on Learning Representations},
+      year = {2024}
     }
